@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import BookDisplay from './BookDisplay';
 
 class SearchBooks extends Component {
     state = {
@@ -33,7 +34,9 @@ class SearchBooks extends Component {
                             </div>
                     </div>
                     <div className="search-books-results">
-                    <ol className="books-grid"></ol>
+                        <BookDisplay 
+                            books={this.props.books}
+                        />
                     </div>
                 </div>
             </div>
