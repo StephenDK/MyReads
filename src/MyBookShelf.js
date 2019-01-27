@@ -1,20 +1,7 @@
 import React, { Component } from 'react';
 
 class MyBookShelf extends Component {
-    state = {
-        Books: []
-    }
-
-    // lifecycle event that fetches all books from back-end
-  componentDidMount() {
-    BooksAPI.getAll()
-      .then((books) => {
-        this.setState(() => ({
-          Books
-        }))
-      })
-  }
-
+    
     render() {
         return (
             <div className="list-books">

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class SearchBooks extends Component {
     state = {
@@ -8,11 +9,17 @@ class SearchBooks extends Component {
 
 
     render() {
+        console.log(this.props.books)
         return (
             <div>
                 <div className="search-books">
                     <div className="search-books-bar">
-                        <button className="close-search" onClick={() => this.setState({ showSearchPage: false })}>Close</button>
+                        {/* <button className="close-search" onClick={() => this.setState({ showSearchPage: false })}>Close</button> */}
+                        <Link 
+                            to='/'
+                        >
+                        Home
+                        </Link>
                             <div className="search-books-input-wrapper">
                                 {/*
                                 NOTES: The search from BooksAPI is limited to a particular set of search terms.
