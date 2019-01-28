@@ -59,6 +59,7 @@ class SearchBooks extends Component {
                             books={showingBooks}
                             currentlyRead={this.props.currentlyRead}
                             addToRead={this.props.addToRead}
+                            wantToRead={this.props.wantToRead}
                         />
                     </div>
                     {/* This is for the showing how many books are left and clearing the query */}

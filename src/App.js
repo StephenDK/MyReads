@@ -13,17 +13,18 @@ import SearchBooks from './SearchBooks';
 // The second route will be the SearchBooks component
 
 // Test component
-const test = () => (
-  <div>
-    My Reads
-  </div>
-)
+// const test = () => (
+//   <div>
+//     My Reads
+//   </div>
+// )
 
 class BooksApp extends React.Component {
   
   state = {
     books: [],
     currentlyReading: [],
+    wantToRead: [],
     read: []
   }
     /**
@@ -57,6 +58,12 @@ class BooksApp extends React.Component {
     }))
   }
 
+  wantToRead = (book) => {
+    this.setState((currentState) => ({
+      wantToRead: currentState.wantToRead.concat(book)
+    }))
+  }
+
   render() {
     // console.log(this.state.books);
     return (
@@ -66,6 +73,8 @@ class BooksApp extends React.Component {
         <MyBookShelf 
           currentlyReading={this.state.currentlyReading}
           alreadyRead={this.state.read}
+          wantToRead={this.state.wantToRead}
+          read={this.state.read}
         />
       )} />
 
@@ -76,6 +85,7 @@ class BooksApp extends React.Component {
             books={this.state.books}
             currentlyRead={this.addCurrentlyRead}
             addToRead={this.addToRead}
+            wantToRead={this.wantToRead}
           />
         )}/>
       </div>

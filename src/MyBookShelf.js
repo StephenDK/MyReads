@@ -27,7 +27,9 @@ class MyBookShelf extends Component {
                 <div className="bookshelf-books">
                     <ol className="books-grid">
                     {/* Use the bookdisplay component to render the want to read books */}
-                    
+                        <BookDisplay 
+                            books={this.props.wantToRead}
+                        />
                     </ol>
                 </div>
                 </div>
@@ -36,7 +38,9 @@ class MyBookShelf extends Component {
                 <div className="bookshelf-books">
                     <ol className="books-grid">
                     {/* Use the bookdisplay component to render the already read books */}
-                    
+                        <BookDisplay 
+                            books={this.props.read}
+                        />
                     
                     </ol>
                 </div>

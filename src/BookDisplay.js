@@ -11,13 +11,14 @@ const BookDisplay = (props) => {
                 {props.books.map((book) => (
                     <li key={book.id} className=''>
                         <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url("${book.imageLinks.smallThumbnail}")`}}></div>
+                        <div className="book-title">{book.title}</div>
+                        <div className="book-authors">{book.author}</div>
                         <BookShelfChanger 
                             book={book}
                             currentlyRead={props.currentlyRead}
                             addToRead={props.addToRead}
+                            wantToRead={props.wantToRead}
                         />
-                        <div className="book-title">{book.title}</div>
-                        <div className="book-authors">{book.author}</div>
                     </li>
                 ))}
             </ol>
