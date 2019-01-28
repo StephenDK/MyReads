@@ -19,7 +19,7 @@ class SearchBooks extends Component {
     }
 
     render() {
-        console.log(this.props.books)
+        console.log(this.props)
 
         // Destructure the state and props
         const { query } = this.state;
@@ -57,6 +57,8 @@ class SearchBooks extends Component {
                     <div className="search-books-results">
                         <BookDisplay 
                             books={showingBooks}
+                            currentlyRead={this.props.currentlyRead}
+                            addToRead={this.props.addToRead}
                         />
                     </div>
                     {/* This is for the showing how many books are left and clearing the query */}

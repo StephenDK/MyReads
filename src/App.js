@@ -43,6 +43,19 @@ class BooksApp extends React.Component {
       })
   }
 
+  // These methods below controll adding a book to currently reading and read
+  addCurrentlyRead = (book) => {
+    this.setState((currentState) => ({
+      currentlyReading: currentState.currentlyReading.concat(book)
+    }))
+  }
+
+  addToRead = (book) => {
+    this.setState((currentState) => ({
+      read: currentState.read.concat(book)
+    }))
+  }
+
   render() {
     // console.log(this.state.books);
     return (
@@ -55,6 +68,8 @@ class BooksApp extends React.Component {
         <Route exact path='/search' render={() => (
           <SearchBooks 
             books={this.state.books}
+            currentlyRead={this.addCurrentlyRead}
+            addToRead={this.addToRead}
           />
         )}/>
       </div>
