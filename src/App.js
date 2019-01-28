@@ -1,7 +1,8 @@
-import React from 'react'
+import React from 'react';
 import { Route } from 'react-router-dom';
-import * as BooksAPI from './BooksAPI'
-import './App.css'
+import * as BooksAPI from './BooksAPI';
+import './App.css';
+import MyBookShelf from './MyBookShelf';
 import SearchBooks from './SearchBooks';
 
 
@@ -61,7 +62,12 @@ class BooksApp extends React.Component {
     return (
       <div className="app">
       {/* This route will be for the mybookshelf component which is "/" */}
-      <Route exact path='/' component={test} />
+      <Route exact path='/' render={() => (
+        <MyBookShelf 
+          currentlyReading={this.state.currentlyReading}
+          alreadyRead={this.state.read}
+        />
+      )} />
 
       {/* This will be the route for search books component "/search" 
           For the search books component we will pass all the books from application state*/}
