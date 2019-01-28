@@ -20,7 +20,6 @@ const bookShelfChanger = (props) => {
             >
             Want to Read
             </button>
-
         </div>    
     )
 }
