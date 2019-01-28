@@ -53,6 +53,7 @@ class SearchBooks extends Component {
                                 onChange={(event) => this.updateQuery(event.target.value)}
                                 />
                         </div>
+                        <Link to='/'>Home</Link>
                     </div>
                     <div className="search-books-results">
                         <BookDisplay 
@@ -72,8 +73,6 @@ class SearchBooks extends Component {
                         )}
                     </div>
                 </div>
-                {/* <button className="close-search" onClick={() => this.setState({ showSearchPage: false })}>Close</button> */}
-                <Link to='/'>Home</Link>
             </div>
         )
     }

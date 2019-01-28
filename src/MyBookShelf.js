@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import BookDisplay from './BookDisplay';
 
 class MyBookShelf extends Component {
     
     render() {
         return (
+         
             <div className="list-books">
+            <Link to='/search'>Search Books</Link>
             <div className="list-books-title">
             <h1>MyReads</h1>
             </div>
