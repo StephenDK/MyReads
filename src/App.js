@@ -21,7 +21,9 @@ const test = () => (
 class BooksApp extends React.Component {
   
   state = {
-    books: []
+    books: [],
+    currentlyReading: [],
+    read: []
   }
     /**
      * TODO: Instead of using this state variable to keep track of which page
